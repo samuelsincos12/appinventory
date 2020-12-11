@@ -1,5 +1,5 @@
 $("#tipe").change(() => {
-  let types = $(this).val();
+  let types = $("#tipe").val();
 
   if(types) {
     let objAjaxTypes = {
@@ -19,11 +19,13 @@ function typesCallback(data) {
     $("#jenis").empty();
     $("#jenis").append('<option>Pilih Jenis</option>');
 
-    for (let types in data)
-      $("#jenis").append('<option value="' + types + '">' + types + '</option>');
+    for (let key in data)
+      $("#jenis").append('<option value="' + data[key] + '">' + data[key] + '</option>');
   } 
-  else
+  else {
     $("#jenis").empty();
+    $("#jenis").append('<option>Tidak ada pilihan</option>');
+  }
 }
 
 function ajaxResponse(callback, properties, ...arguments) {
