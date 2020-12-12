@@ -27,7 +27,7 @@
           @endif
           <div class="col-sm-12">
             <form role="form" method="POST" action="{{ url('/search') }}">
-              <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+              {{ csrf_field() }}
               <div class="form-group">
                 <label for="from">Dari:</label>
                 <input type="date" class="form-control" id="from" name="from">
