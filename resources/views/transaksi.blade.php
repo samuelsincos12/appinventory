@@ -58,7 +58,7 @@
             <tbody>
                @foreach($data as $i => $d)
               <tr>
-                <td>{{ $i +1}}</td>
+                <td>{{ $i+1}}</td>
                 <td>{{ $d->tipe }}</td>
                 <td>{{ $d->jenis }}</td>
                 <td>{{ $d->jumlah }}</td>
