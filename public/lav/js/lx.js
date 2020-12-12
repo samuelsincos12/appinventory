@@ -31,12 +31,6 @@ function typesCallback(data) {
 }
 
 function ajaxResponse(callback, properties, ...arguments) {
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-  });
-
   $.ajax({
     type: properties.method,
     url: properties.url,
@@ -49,6 +43,9 @@ function ajaxResponse(callback, properties, ...arguments) {
     },
     error: (e) => {
       return console.log("Refresh Halaman \n Error Text: " + e.responseText);
+    },
+    beforeSend: (xhr) => {
+      xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
     }
   });
 }
