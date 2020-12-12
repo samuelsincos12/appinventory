@@ -26,7 +26,8 @@
             </div>
           @endif
           <div class="col-sm-12">
-            <form role="form" method="GET" action="{{ url('/search') }}">
+            <form role="form" method="POST" action="{{ url('/search') }}">
+              <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
               <div class="form-group">
                 <label for="from">Dari:</label>
                 <input type="date" class="form-control" id="from" name="from">
@@ -36,7 +37,7 @@
                 <input type="date" class="form-control" id="to" name="to">    
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-info" value="Cari">
+                <input type="submit" class="btn btn-info" id="cari" value="Cari">
               </div> 
             </form>
           </div>

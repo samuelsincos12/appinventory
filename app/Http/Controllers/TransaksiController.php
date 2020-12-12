@@ -42,7 +42,7 @@ class TransaksiController extends Controller
 
     public function show(Request $request)
     {
-        $query = Kategori::ajax($request->tipe);
+        $query = Kategori::ajax($request->type);
         return response()->json($query);
     }
 

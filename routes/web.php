@@ -34,6 +34,6 @@ Route::post('/transaksi/update/{id}', 'TransaksiController@update');
 Route::get('/transaksi/hapus/{id}', 'TransaksiController@destroy');
 
 //ajax
-Route::get('/ajx','TransaksiController@show');
-Route::get('/search','TransaksiController@search');
+Route::post('/ajaxtypes','TransaksiController@show');
+Route::post('/search','TransaksiController@search');
 
