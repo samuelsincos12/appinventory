@@ -1,6 +1,5 @@
 @extends('template')
 @section('title', 'Transaksi')
- 
 @section('intro-header')
   <!-- Header -->
   <header class="intro-header text-white" style="background: url('{{ asset('lav/images/about-bg.jpg') }}') no-repeat top center;">
@@ -10,7 +9,6 @@
   </header>
   <!-- END : Header -->
 @endsection
- 
 @section('main')
   <!-- Main -->
   <section class="main">

@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
- 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
-<meta name="_base_url" content="{{ url('/') }}">
-<meta name="csrf-token" content="{{ csrf_token() }}">
- 
-<title>@yield('title')</title>
- 
-<!-- Bootstrap core CSS -->
-<link href="{{ asset('lav/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
- 
-<!-- Custom styles -->
-<link href="{{ asset('lav/css/style.css') }}" rel="stylesheet">
- 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="_base_url" content="{{ url('/') }}">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>@yield('title')</title>
+  <!-- Bootstrap core CSS -->
+  <link href="{{ asset('lav/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="{{ asset('lav/css/style.css') }}" rel="stylesheet">
 </head>
- 
-<body>
- 
+<body> 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Aplikasi Inventory</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-
- 
-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle 
- 
-navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">

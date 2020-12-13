@@ -21,9 +21,9 @@ class Transaksi extends Model
     	return $query->where('id', $id)->first();
     }
 
-	public function scopeFnd($query, $f, $t)
+	public function scopeFnd($query, $from, $to)
     {
-    	return $query->whereBetween('tanggal', [$f, $t])->get();
+    	return $query->whereBetween('tanggal', [$from, $to])->get();
     }
 
     public function scopeMsk($query)

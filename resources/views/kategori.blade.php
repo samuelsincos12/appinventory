@@ -1,6 +1,5 @@
 @extends('template')
 @section('title', 'Kategori')
- 
 @section('intro-header')
   <!-- Header -->
   <header class="intro-header text-white" style="background: url('{{ asset('lav/images/about-bg.jpg') }}') no-repeat top center;">
@@ -10,7 +9,6 @@
   </header>
   <!-- END : Header -->
 @endsection
- 
 @section('main')
   <!-- Main -->
   <section class="main">
@@ -39,7 +37,7 @@
             <tbody>
               @foreach($data as $i => $d)
               <tr>
-                <td>{{ $i +1}}</td>
+                <td>{{ $i+1 }}</td>
                 <td>{{ $d->tipe }}</td>
                 <td>{{ $d->jenis }}</td>
                 <td>
