@@ -15,14 +15,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <form role="form" method="POST" action="{{ url('transaksi/update', $data->id) }}">
+          <form method="POST" action="{{ url('transaksi/update', $data->id) }}" role="form">
             {{ csrf_field() }}
             @if (Session::has('message'))
               <div class="col-sm-12">
                 <div class="row">
                   <div class="alert alert-error alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                    <h4 style="text-align:center"><i class="icon fa fa-exclamation-circle"></i>Error!</h4><p style="text-align:center">{{ session('message') }}</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <h4 style="text-align:center">
+                        <i class="icon fa fa-exclamation-circle"></i>Error!
+                    </h4>
+                    <p style="text-align:center">{{ session('message') }}</p>
                   </div>
                 </div>
               </div>
@@ -53,7 +58,7 @@
               @if ($errors->has('jumlah'))
                 <span class="help-block"><strong>{{ $errors->first('jumlah') }}</strong></span>
               @endif
-            </div> 
+            </div>
             <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">
               <label for="desc">Deskripsi</label>
               <textarea class="form-control" rows="5" id="desc" name="desc" value="{{ old('desc', $data->desc) }}"></textarea>

@@ -1,6 +1,5 @@
 @extends('template')
 @section('title', 'Home')
- 
 @section('intro-header')
   <!-- Header -->
   <header class="intro-header text-white" style="background: url('{{ asset('lav/images/home-bg.jpg') }}') no-repeat bottom center;">
@@ -11,7 +10,6 @@
   </header>
   <!-- END : Header -->
 @endsection
- 
 @section('main')
     <!-- Main -->
     <section class="main">

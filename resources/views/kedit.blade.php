@@ -15,14 +15,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <form role="form" method="POST" action="{{ url('kategori/update', $data->id) }}">
+          <form method="POST" action="{{ url('kategori/update', $data->id) }}" role="form">
             {{ csrf_field() }}
             @if (Session::has('message'))
               <div class="col-sm-12">
                 <div class="row">
                   <div class="alert alert-error alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                    <h4 style="text-align:center"><i class="icon fa fa-exclamation-circle"></i>Error!</h4><p style="text-align:center">{{ session('message') }}</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <h4 style="text-align:center">
+                        <i class="icon fa fa-exclamation-circle"></i>Error!
+                    </h4>
+                    <p style="text-align:center">{{ session('message') }}</p>
                   </div>
                 </div>
               </div>
@@ -44,7 +49,7 @@
               @if ($errors->has('jenis'))
                 <span class="help-block"><strong>{{ $errors->first('jenis') }}</strong></span>
               @endif
-            </div> 
+            </div>
             <button type="submit" class="btn btn-primary">Edit</button>
         </form>
         </div>

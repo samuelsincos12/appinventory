@@ -18,7 +18,9 @@
           @if (Session::has('message'))
             <div class="col-sm-12">
               <div class="alert alert-info alert-dismissible">
-                <h4 style="text-align:center"><i class="icon fa fa-check"></i>Berhasil!</h4>
+                <h4 style="text-align:center">
+                    <i class="icon fa fa-check"></i>Berhasil!
+                </h4>
                 <p style="text-align:center">{{ session('message') }}</p>
               </div>
             </div>
@@ -32,11 +34,11 @@
               </div>
               <div class="form-group">
                 <label for="to">Ke:</label>
-                <input type="date" class="form-control" id="to" name="to">    
+                <input type="date" class="form-control" id="to" name="to">
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-info" id="cari" value="Cari">
-              </div> 
+              </div>
             </form>
           </div>
           <br/><br/>
