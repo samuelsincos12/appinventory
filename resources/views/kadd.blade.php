@@ -22,10 +22,10 @@
                 <div class="row">
                   <div class="alert alert-error alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
                     <h4 style="text-align:center">
-                        <i class="icon fa fa-exclamation-circle"></i>Error!
+                      <i class="icon fa fa-exclamation-circle"></i>Error!
                     </h4>
                     <p style="text-align:center">{{ session('message') }}</p>
                   </div>
@@ -40,18 +40,22 @@
                 <option value="Pengeluaran">Pengeluaran</option>
               </select>
               @if ($errors->has('tipe'))
-                <span class="help-block"><strong>{{ $errors->first('tipe') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('tipe') }}</strong>
+                </span>
               @endif
             </div>
             <div class="form-group{{ $errors->has('jenis') ? ' has-error' : '' }}">
               <label for="jenis">Jenis</label>
               <input type="text" class="form-control" id="jenis" name="jenis" />
               @if ($errors->has('jenis'))
-                <span class="help-block"><strong>{{ $errors->first('jenis') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('jenis') }}</strong>
+                </span>
               @endif
             </div>
             <button type="submit" class="btn btn-primary">Tambah</button>
-        </form>
+          </form>
         </div>
       </div>
     </div>

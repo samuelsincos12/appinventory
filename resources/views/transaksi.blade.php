@@ -19,7 +19,7 @@
             <div class="col-sm-12">
               <div class="alert alert-info alert-dismissible">
                 <h4 style="text-align:center">
-                    <i class="icon fa fa-check"></i>Berhasil!
+                  <i class="icon fa fa-check"></i>Berhasil!
                 </h4>
                 <p style="text-align:center">{{ session('message') }}</p>
               </div>

@@ -22,10 +22,10 @@
                 <div class="row">
                   <div class="alert alert-error alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
                     <h4 style="text-align:center">
-                        <i class="icon fa fa-exclamation-circle"></i>Error!
+                      <i class="icon fa fa-exclamation-circle"></i>Error!
                     </h4>
                     <p style="text-align:center">{{ session('message') }}</p>
                   </div>
@@ -47,7 +47,9 @@
               <label for="jenis">Jenis</label>
               <input type="text" class="form-control" id="jenis" name="jenis" value="{{ old('jenis', $data->jenis) }}"/>
               @if ($errors->has('jenis'))
-                <span class="help-block"><strong>{{ $errors->first('jenis') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('jenis') }}</strong>
+                </span>
               @endif
             </div>
             <button type="submit" class="btn btn-primary">Edit</button>

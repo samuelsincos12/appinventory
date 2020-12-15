@@ -11,24 +11,24 @@
   <!-- END : Header -->
 @endsection
 @section('main')
-    <!-- Main -->
-    <section class="main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Rp {{ $data['saldo'] }}</h2>
-            <p>Saldo Saat ini</p>
-          </div>
-          <div class="col-md-4">
-            <h2>Rp {{ $data['in'] }}</h2>
-            <p>Jumlah Pemasukkan</p>
-          </div>
-          <div class="col-md-4">
-            <h2>Rp {{ $data['out'] }}</h2>
-            <p>Jumlah Pengeluaran</p>
-          </div>
+  <!-- Main -->
+  <section class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Rp {{ $data['saldo'] }}</h2>
+          <p>Saldo Saat ini</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Rp {{ $data['in'] }}</h2>
+          <p>Jumlah Pemasukkan</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Rp {{ $data['out'] }}</h2>
+          <p>Jumlah Pengeluaran</p>
         </div>
       </div>
-    </section>
-    <!-- END : Main -->
+    </div>
+  </section>
+  <!-- END : Main -->
 @endsection

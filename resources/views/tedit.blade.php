@@ -22,10 +22,10 @@
                 <div class="row">
                   <div class="alert alert-error alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
                     <h4 style="text-align:center">
-                        <i class="icon fa fa-exclamation-circle"></i>Error!
+                      <i class="icon fa fa-exclamation-circle"></i>Error!
                     </h4>
                     <p style="text-align:center">{{ session('message') }}</p>
                   </div>
@@ -49,21 +49,27 @@
                 <option value="{{ $data->jenis }}">{{ $data->jenis }}</option>
               </select>
               @if ($errors->has('jenis'))
-                <span class="help-block"><strong>{{ $errors->first('jenis') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('jenis') }}</strong>
+                </span>
               @endif
             </div>
             <div class="form-group{{ $errors->has('jumlah') ? ' has-error' : '' }}">
               <label for="jumlah">Nominal</label>
               <input type="text" class="form-control" id="jumlah" name="jumlah" value="{{ old('jumlah', $data->jumlah) }}" />
               @if ($errors->has('jumlah'))
-                <span class="help-block"><strong>{{ $errors->first('jumlah') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('jumlah') }}</strong>
+                </span>
               @endif
             </div>
             <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">
               <label for="desc">Deskripsi</label>
               <textarea class="form-control" rows="5" id="desc" name="desc" value="{{ old('desc', $data->desc) }}"></textarea>
               @if ($errors->has('desc'))
-                <span class="help-block"><strong>{{ $errors->first('desc') }}</strong></span>
+                <span class="help-block">
+                  <strong>{{ $errors->first('desc') }}</strong>
+                </span>
               @endif
             </div>
             <button type="submit" class="btn btn-primary">Tambah</button>
