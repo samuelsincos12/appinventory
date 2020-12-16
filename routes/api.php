@@ -17,6 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// url http:127.0.0.1:8000/api/
+# URL http:127.0.0.1:8000/api/
 Route::post('/ajaxtypes','TransaksiController@show');
 Route::post('/search','TransaksiController@search');
