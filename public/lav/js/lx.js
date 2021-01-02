@@ -14,7 +14,7 @@ tipe.change(() => {
     }
 
     ajaxResponse(typesCallback, objAjaxTypes);
-  } 
+  }
   else
     jenis.empty().append('<option>Pilih Jenis</option>');
 });
@@ -25,7 +25,7 @@ function typesCallback(data) {
 
     for (let key in data)
       jenis.append('<option value="' + data[key] + '">' + data[key] + '</option>');
-  } 
+  }
   else
     jenis.empty().append('<option>Tidak ada pilihan</option>');
 }
@@ -42,7 +42,7 @@ function ajaxResponse(callback, properties, ...arguments) {
       return callback(response, ...arguments);
     },
     error: (e) => {
-      return console.log("Refresh Halaman \n Error Text: " + e.responseText);
+      return console.log("Refresh Halaman \nError Text: " + e.responseText);
     },
     beforeSend: (xhr) => {
       xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
